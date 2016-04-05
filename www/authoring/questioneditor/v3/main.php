@@ -28,7 +28,7 @@ include_once 'includes/header.php';
     <div class="section">
 
         <!-- Container for the question editor api to load into -->
-        <script src="<?php echo $url_questioneditor_v3; ?>"></script>
+        <script src="https://questioneditor.vg.learnosity.com?latest"></script>
         <div class="margin-bottom-small">
             <button type="button" class="lrn-question-button btn btn-default">Question</button>
             <button type="button" class="lrn-feature-button btn btn-default">Feature</button>
@@ -42,8 +42,42 @@ include_once 'includes/header.php';
         var initOptions = {
             configuration: {
                 questionsApiVersion: 'v2'
+                },
+            widget_metadata: {
+                'hidden_attributes': ['stimulus']
+                },
+            /*rich_text_editor: {
+             type: 'wysihtml'
+             },*/
+            widgetType: 'response',
+            'rich_text_editor': {
+                type: 'wysihtml',
+                customButtons: [
+                    {
+                        name: 'test',
+                        label: 'Super test',
+                        icon: 'https://questioneditor.vg.learnosity.com/latest/vendor/ckeditor/plugins/custombuttons/icons/math.png',
+                        func: function(attribute, callback) {
+                            callback(" <strong>You're a genius, it's attribute " + attribute + "</strong> ");
+                        },
+                        attributes: ['stimulus']
+                    },
+                    {
+                        name: 'test2',
+                        label: 'Super test123',
+                        icon: 'http://www.genkin.org/gallery/australia/sydney/hb/au-sydney-harbour-bridge-0038_l.jpg',
+                        func: function(attribute, callback) {
+                            callback(" <strong>And again!!! it's attribute " + attribute + "</strong> ");
+                        }
+                    }
+                ]
             },
-            widgetType: 'response'
+            ui: {
+                layout: {
+                    advanced_group: true,
+                    global_template: 'edit'
+                }
+            }
         };
 
         var qeApp = LearnosityQuestionEditor.init(initOptions, '.my-question-editor');
