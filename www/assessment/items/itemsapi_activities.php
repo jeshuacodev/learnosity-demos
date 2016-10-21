@@ -184,6 +184,8 @@ $studentid = 'reportsapitestuser';
 //         "id" => "reportsapitest_item_from_pool_15"
 //     ]
 // ];
+// $session_id = '6f4cc838-6345-40c2-9214-a5388c65fef6';
+// $state = 'review';
 
 // Test Case 7: many items but only one questions (= many responses ids but one question)
 // 90e8f55c-0b58-4923-af9c-819d816e3923
@@ -200,6 +202,8 @@ $studentid = 'reportsapitestuser';
 //     'MultipleItemsWithOnlyOneQuestion_9',
 //     'MultipleItemsWithOnlyOneQuestion_10'
 // ];
+// $session_id = '90e8f55c-0b58-4923-af9c-819d816e3923';
+// $state = 'review';
 
 // Test Case 8: items including features
 // 1b88b62c-1b26-45c3-a03d-b1e830a3ee39
@@ -208,15 +212,39 @@ $studentid = 'reportsapitestuser';
 //     'response_id_order_test_2',
 //     'response_id_order_test_1'
 // ];
+// $session_id = '1b88b62c-1b26-45c3-a03d-b1e830a3ee3';
+// $state = 'review';
 
 //3fda391b-92cd-4914-a389-756d6cfd524e
-//Test Case: 9: After this session, question refs will be changed.
+// Test Case: 9: After this session, question refs will be changed.
 // $items = [
 //     'reports_api_unit_test_session_detail_by_question_item_10',
 //     'reports_api_unit_test_session_detail_by_question_item_11'
 // ];
+// $session_id = '3fda391b-92cd-4914-a389-756d6cfd524e';
+// $state = 'review';
 
-// $session_id = '6f4cc838-6345-40c2-9214-a5388c65fef6';
+// Test Case: 10: Item pool is updated after submission
+// $studentid = 'reportsapitestuser';
+// $items = [
+//     [
+//         "item_pool_id" => "reports_api_item_pool_change_test_pool_1",
+//         "reference" => "reports_api_item_pool_change_test_1",
+//         "id" => "reportsapitest_item_pool_change_test_1"
+//     ],
+//     [
+//         "item_pool_id" => "reports_api_item_pool_change_test_pool_1",
+//         "reference" => "reports_api_item_pool_change_test_2",
+//         "id" => "reportsapitest_item_pool_change_test_2"
+//     ],
+//     [
+//         "item_pool_id" => "reports_api_item_pool_change_test_pool_1",
+//         "reference" => "reports_api_item_pool_change_test_3",
+//         "id" => "reportsapitest_item_pool_change_test_3"
+//     ]
+// ];
+// $session_id = 'ab0f6ef1-3b34-436e-bba2-3ea91eb3282e'
+//$state = 'review';
 
 $request = array(
     // 'activity_template_id' => 'ReportAPISessionDetailByQuestionTest_1',
