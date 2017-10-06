@@ -14,7 +14,7 @@ include_once 'includes/header.php';
             <p>Learnosity's <b>Items API</b> provides a simple way to access content from the Learnosity
                 item bank, and to optionally pull in activities (assessments) that can be embedded in your pages.
                 It leverages the <a href="../questions/index.php">Questions API</a> and the
-                <a href="../assess/index.php">Assess API</a> as appropriate.</p>
+                <a href="../assess/assessapi.php">Assess API</a> as appropriate.</p>
             <p>The Items API also supports both items and testlet
                 <a href="https://docs.learnosity.com/assessment/items/knowledgebase/adaptiveassessment" target="_blank">
                     adaptive assessments</a>.
