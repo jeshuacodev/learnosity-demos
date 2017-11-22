@@ -18,3 +18,6 @@ run-vagrant:
 
 devbuild:
 	composer install
+
+clean:
+	rm -rf vendor/
