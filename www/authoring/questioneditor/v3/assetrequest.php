@@ -37,7 +37,7 @@
     * example currently being requested
     *
     ********************************************************************/
-    var assetRequestFunction = function(mediaRequested, returnType, callback, attributes) {
+    var assetRequestFunction = function(mediaRequested, returnType, callback) {
         if (mediaRequested === 'image') {
             var $modal = $('.modal.img-upload'),
             $images = $('.asset-img-gallery img'),
@@ -48,13 +48,12 @@
                     callback($(this).data('img'));
                 }
                 $modal.modal('hide');
+                $images.off('click', imgClickHandler);
             };
             $images.on('click', imgClickHandler);
             $modal.modal({
                 backdrop: 'static'
-            }).on('hide', function () {
-                $images.off('click', imgClickHandler);
-            });
+            })
         }
     };
 
@@ -97,19 +96,7 @@
         "assetRequest": assetRequestFunction
     };
 
-    var hook = "learnosity-question-editor";
-
-    var callbacks = {
-        "errorListener": function (e) {
-            //callback to occur on error
-            console.log("Error code ", e.code);
-            console.log("Error message ", e.message);
-            console.log("Error name ", e.name);
-            console.log("Error name ", e.title);
-        }
-    };
-
-    var questionEditorApp = LearnosityQuestionEditor.init(initOptions, hook, callbacks);
+    var questionEditorApp = LearnosityQuestionEditor.init(initOptions);
 
 </script>
 
