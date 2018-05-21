@@ -7,18 +7,16 @@ lint:
 	# check for php syntax errors
 	find src www -type f -name '*.php' -exec php -l {} \; | (! grep -v "No syntax errors detected" )
 
-
 test-404: yarn-install
 	# Find broken links
 	rm -f link_checker_output.txt
+
 	php -S localhost:$(php_pages_port) -t $(www_dir) >/dev/null 2>&1 & \
-	$(blc) http://localhost:9097 -r > $(blc_output_file)
+	$(blc) http://localhost:$(php_pages_port) -r > $(blc_output_file)
 
 	# Check for 404's
-	if grep -q "404 Not Found" "$(blc_output_file)"; then
-	    echo "404's Found"
-	    cat mylogfile.txt
-	    exit 1
+	if grep -q "HTTP_404" $(blc_output_file); then \
+	    echo "404's Found" && cat $(blc_output_file) && exit 1; \
 	fi
 
 yarn-install:

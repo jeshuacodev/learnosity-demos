@@ -12,7 +12,9 @@
     "gulp-uglify": "^1.5.1",
     "w3c-link-validator": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "broken-link-checker": "^0.7.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
