@@ -21,7 +21,8 @@ $request = array(
             'type'        => 'sessions-summary',
             'user_id'     => 'demo_student',
             'session_ids' => array(
-                '8524a7f7-169f-4b0b-b2ef-23df7c3ad51f'
+                // '8524a7f7-169f-4b0b-b2ef-23df7c3ad51f'
+                '54908650-2e71-47cd-bb37-22d7199f55f5'
             )
         ),
         //changed to progress by tag
@@ -32,7 +33,8 @@ $request = array(
             'user_id'     => 'mce_student_3',
             'hierarchy'   => 'CCSS',
             'session_ids' => array(
-                'd5cde952-1111-49ad-bfc7-c1ba102f3b22'
+                // 'd5cde952-1111-49ad-bfc7-c1ba102f3b22'
+                'df9661f8-e82c-4728-b548-f1abb623cb4d'
             ),
         ),
     )

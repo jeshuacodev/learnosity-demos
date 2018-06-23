@@ -12,160 +12,40 @@ $security = array(
 );
 
 $request = [
-    'activity_id' => 'itemsassessdemo',
+    'activity_id' => '1c658d55-68cf-488e-9f4d-3096fffcb7a4',
     'name' => 'Items API demo - assess activity',
     'rendering_type' => 'assess',
     'type' => 'submit_practice',
     'session_id' => Uuid::generate(),
+    // 'session_id' => '9ac6c233-8786-474e-b180-94dcf726a9f4',
     'user_id' => $studentid,
     'items' => [
         'Demo3',
-        'Demo4',
-        'accessibility_demo_6',
-        'Demo6',
-        'Demo7',
-        'Demo8',
-        'Demo9',
-        'Demo10',
-        'audioplayer-demo-1'
+        // 'Demo4',
+        // 'accessibility_demo_6',
+        // 'Demo6',
+        // 'Demo7',
+        // 'Demo8',
+        // 'Demo9',
+        // 'Demo10',
+        // 'audioplayer-demo-1'
+        '06b16d71-9971-4254-9f8f-44cc825799ac',
+        'b3206d89-1fca-4485-ba9d-a338f73abdb6',
+        'ee213ba1-a821-48b8-8cb1-9600eb84eff0',
+        '0fa2de9a-1ac6-449c-9f11-aee116929210',
+        '2c6ed8e5-e6d2-479d-9c9b-b0d41b66391d',
+        '248df79d-ef24-4b26-b20f-7abce464f2b8',
+        '5d5a7917-12c3-446e-9c1f-15d932ce287e',
+        'c42dd5d1-8578-461a-acfa-0c03556bc0b0',
+        'a568513a-1e74-4247-9fe7-e0819eccbdf0',
+        '7d6d2056-28b4-4c0f-ad41-250adb65928b',
+        'bbca3e1e-1736-4d85-bc13-d5f91aa1adec',
+        '4e7d3d3e-2a3b-40fc-94fb-99d349044e9b',
+        '8c43e434-9c43-4ea8-8bce-4b0cd648e8c5',
+        '18516fef-d3b7-4a0e-ba54-34e59d068b30',
+        '32fc7b0a-4228-49f7-bde6-ee1846314627',
+        '686bbf58-68eb-4959-804c-1fe4f17c9ba5'
     ],
-    'config' => [
-        'title' => 'Demo activity - showcasing question types and assess options',
-        'subtitle' => 'Walter White',
-        'regions' => [
-            'top-left' => [
-                [
-                    'type' => 'title_element'
-                ],
-                [
-                    'type' => 'header_element',
-                    'default_label_option' => 'regionHeaderTopLeft'
-                ]
-            ],
-            'top-right' => [
-                [
-                    'type' => 'pause_button',
-                    'position' => 'right'
-                ],
-                [
-                    'type' => 'timer_element'
-                ],
-                [
-                    'type' => 'reading_timer_element'
-                ],
-                [
-                    'type' => 'itemcount_element'
-                ],
-                [
-                    'type' => 'header_element',
-                    'default_label_option' => 'regionHeaderTopRight'
-                ]
-            ],
-            'items' => [
-                [
-                    'type' => 'slider_element'
-                ],
-                [
-                    'type' => 'progress_element'
-                ],
-                [
-                    'type' => 'header_element',
-                    'default_label_option' => 'regionHeaderItems'
-                ]
-            ],
-            'right' => [
-                [
-                    'type' => 'verticaltoc_element'
-                ],
-                [
-                    'type' => 'save_button'
-                ],
-                [
-                    'type' => 'reviewscreen_button'
-                ],
-                [
-                    'type' => 'accessibility_button'
-                ],
-                [
-                    'type' => 'calculator_button'
-                ],
-                [
-                    'type' => 'flagitem_button'
-                ],
-                // do not remove masking as it's referred on
-                // https://docs.learnosity.com/authoring/authorguide/tutorials/othertutorials/responsemasking
-                [
-                    'type' => 'masking_button'
-                ],
-                [
-                    'type' => 'header_element',
-                    'default_label_option' => 'regionHeaderRight'
-                ]
-            ],
-            'bottom-right' => [
-                [
-                    'type' => 'next_button'
-                ],
-                [
-                    'type' => 'previous_button'
-                ],
-                [
-                    'type' => 'header_element',
-                    'default_label_option' => 'regionHeaderBottomRight'
-                ]
-            ]
-        ],
-        'navigation' => [
-            'show_progress' => false,
-            'show_intro' => true,
-            'show_outro' => true,
-            'show_title' => false,
-            'skip_submit_confirmation' => false,
-            'warning_on_change' => false,
-            'show_acknowledgements' => true,
-            'auto_save' => [
-                'ui' => false,
-                'saveIntervalDuration' => 500
-            ],
-            'item_count' => [
-                'question_count_option' => false
-            ]
-        ],
-        'time' => [
-            'max_time' => 1500,
-            'limit_type' => 'soft',
-            'warning_time' => 120
-        ],
-        'configuration' => [
-            'shuffle_items' => false,
-            'lazyload' => false,
-            'fontsize' => 'normal',
-            'onsubmit_redirect_url' => 'itemsapi_assess.php',
-            'onsave_redirect_url' => 'itemsapi_assess.php',
-            'ondiscard_redirect_url' => 'itemsapi_assess.php',
-            'idle_timeout' => [
-                'interval' => 300,
-                'countdown_time' => 60
-            ],
-            'submit_criteria' => [
-                'type' => 'attempted'
-            ]
-        ],
-        'questions_api_init_options' => [
-            'beta_flags' => [
-                'reactive_views' => true
-            ]
-        ],
-        'administration' => [
-            'pwd' => '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8',
-            'options' => [
-                'show_save' => true,
-                'show_submit' => true,
-                'show_exit' => true,
-                'show_extend' => true
-            ]
-        ]
-    ]
 ];
 
 

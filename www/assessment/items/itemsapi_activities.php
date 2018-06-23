@@ -57,9 +57,12 @@ $signedRequest = $Init->generate();
 </div>
 
 <div class="section">
-    <!-- Container for the items api to load into -->
     <div id="learnosity_assess"></div>
 </div>
+
+<pre>
+<?php echo $signedRequest; ?>
+</pre>
 <script src="<?php echo $url_items; ?>"></script>
 <script>
     var eventOptions = {
